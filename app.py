@@ -6,7 +6,7 @@ import json
 import requests
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": ["https://yellowsubmarineradar.netlify.app", "http://localhost:5500", "http://127.0.0.1:5050"]}})
 
 # === CONFIG ===
 API_KEY = "nk-LNuSNV-g7vHmrKmb_8t0CPCB6vVW8Hse0QkytrUYKYw"
